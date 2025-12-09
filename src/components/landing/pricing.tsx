@@ -25,7 +25,7 @@ export default function Pricing() {
               </div>
               <p className="font-bold text-white text-xl mb-8">ou R$27,00 à vista</p>
               
-              <Button size="lg" className="w-full text-xl py-8 animate-button-pulse hover:scale-105 transition-transform">
+              <Button size="lg" className="w-full text-xl py-8 animate-button-pulse hover:scale-105 transition-transform shine-effect">
                 SIM, QUERO MEU PACK COM DESCONTO!
               </Button>
               <p className="text-xs text-gray-500 mt-4">Compra segura e entrega automática no seu e-mail.</p>

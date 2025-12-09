@@ -94,6 +94,10 @@ export default {
         'float': {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
+        },
+        shine: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
         }
       },
       animation: {
@@ -101,6 +105,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         'button-pulse': 'button-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'float': 'float 6s ease-in-out infinite',
+        'shine': 'shine 5s ease-in-out infinite',
       },
     },
   },

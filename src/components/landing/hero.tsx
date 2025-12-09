@@ -77,7 +77,7 @@ export default function Hero() {
                 <span className="text-7xl md:text-8xl font-black text-white ml-2">R$9,99</span>
               </div>
               
-              <Button size="lg" className="w-full text-xl py-8 animate-button-pulse hover:scale-105 transition-transform whitespace-normal h-auto">
+              <Button size="lg" className="w-full text-xl py-8 animate-button-pulse hover:scale-105 transition-transform whitespace-normal h-auto shine-effect">
                 SIM, QUERO MEU PACK COM DESCONTO!
               </Button>
               <p className="text-xs text-gray-500 mt-4">Compra segura e entrega automática no seu e-mail.</p>
