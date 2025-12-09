@@ -66,7 +66,7 @@ export default function Hero() {
             <span className="text-primary">+50 Jogos Prontos</span> Para a Mega da Virada
           </h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-gray-300">
-            A escolha inteligente para quem quer aumentar as chances com combinações estudadas, economizando tempo e esforço.
+            A escolha inteligente para quem quer aumentar as chances com combinações estudadas e geradas por matemáticos, economizando tempo e esforço.
           </p>
         </div>
         
