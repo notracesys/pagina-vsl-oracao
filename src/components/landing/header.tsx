@@ -9,6 +9,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import Image from 'next/image';
 
 const navItems = [
   { name: 'Início', href: '#inicio' },
@@ -35,7 +36,8 @@ export default function Header() {
       scrolled ? "bg-black/50 backdrop-blur-lg border-b border-gray-800" : "bg-transparent"
     )}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-        <Link href="#inicio" className="text-2xl font-black text-white font-headline tracking-tighter">
+        <Link href="#inicio" className="flex items-center gap-2 text-2xl font-black text-white font-headline tracking-tighter">
+          <Image src="/logo.png (2)" alt="MegaPack 2024 Logo" width={32} height={32} />
           MegaPack<span className="text-primary">2024</span>
         </Link>
 
