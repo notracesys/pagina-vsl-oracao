@@ -10,9 +10,9 @@ import Footer from '@/components/landing/footer';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen w-full bg-black overflow-x-hidden">
-      <div className="absolute inset-0 z-0 w-full h-full bg-gradient-to-b from-[#4a148c] via-[#1a237e] to-black opacity-60"></div>
-      <div className="absolute inset-0 z-0 h-full w-full bg-black [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+    <div className="flex flex-col min-h-screen w-full bg-[#0a1a14] overflow-x-hidden">
+      <div className="absolute inset-0 z-0 w-full h-full bg-gradient-to-b from-primary/30 via-background/10 to-[#0a1a14] opacity-80"></div>
+      <div className="absolute inset-0 z-0 h-full w-full bg-[#0a1a14] [background:radial-gradient(125%_125%_at_50%_10%,#0a1a14_40%,#209869_100%)] opacity-30"></div>
       
       <Header />
       <main className="relative z-10">
