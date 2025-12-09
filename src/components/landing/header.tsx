@@ -18,8 +18,10 @@ const navItems = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
@@ -51,6 +53,7 @@ export default function Header() {
           </Button>
 
           <div className="md:hidden">
+           {isMounted && (
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -82,6 +85,7 @@ export default function Header() {
                 </div>
               </SheetContent>
             </Sheet>
+           )}
           </div>
         </div>
       </div>
