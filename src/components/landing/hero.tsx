@@ -66,7 +66,7 @@ export default function Hero() {
             <span className="text-primary">+50 Jogos Prontos</span> Para a Mega da Virada
           </h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-gray-300">
-            A escolha inteligente para quem quer aumentar as chances com combinações estudadas e geradas por matemáticos, economizando tempo e esforço.
+            A escolha inteligente para quem quer aumentar as chances com combinações estudadas e geradas por matemáticos, economizando tempo и esforço.
           </p>
         </div>
         
@@ -77,9 +77,11 @@ export default function Hero() {
                 <span className="text-7xl md:text-8xl font-black text-white ml-2">R$9,99</span>
               </div>
               
-              <Button size="lg" className="w-full text-xl py-8 animate-button-pulse hover:scale-105 transition-transform whitespace-normal h-auto shine-effect">
-                SIM, QUERO MEU PACK COM DESCONTO!
-              </Button>
+              <Link href="https://pay.kirvano.com/415dda1a-220b-4514-983c-c51283359309" target="_blank">
+                <Button size="lg" className="w-full text-xl py-8 animate-button-pulse hover:scale-105 transition-transform whitespace-normal h-auto shine-effect">
+                  SIM, QUERO MEU PACK COM DESCONTO!
+                </Button>
+              </Link>
               <p className="text-xs text-gray-500 mt-4">Compra segura e entrega automática no seu e-mail.</p>
 
               <div className="mt-6 flex items-center justify-center gap-6 text-sm font-medium text-gray-300">

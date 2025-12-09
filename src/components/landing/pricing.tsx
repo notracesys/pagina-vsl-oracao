@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import CountdownTimer from "@/components/shared/countdown-timer";
 import { Reveal } from "../shared/reveal";
+import Link from 'next/link';
 
 export default function Pricing() {
   // Set the countdown to end in 3 days from now
@@ -25,9 +26,11 @@ export default function Pricing() {
               </div>
               <p className="font-bold text-white text-xl mb-8">ou R$27,00 à vista</p>
               
-              <Button size="lg" className="w-full text-xl py-8 animate-button-pulse hover:scale-105 transition-transform shine-effect">
-                SIM, QUERO MEU PACK COM DESCONTO!
-              </Button>
+              <Link href="https://pay.kirvano.com/415dda1a-220b-4514-983c-c51283359309" target="_blank">
+                <Button size="lg" className="w-full text-xl py-8 animate-button-pulse hover:scale-105 transition-transform shine-effect">
+                  SIM, QUERO MEU PACK COM DESCONTO!
+                </Button>
+              </Link>
               <p className="text-xs text-gray-500 mt-4">Compra segura e entrega automática no seu e-mail.</p>
             </div>
 
