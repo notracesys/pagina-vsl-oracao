@@ -36,7 +36,12 @@ export default function Header() {
     )}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
         <Link href="#inicio" className="flex items-center gap-2 text-2xl font-black text-white font-headline tracking-tighter">
-          <img src="/l.jpg" alt="MegaPack 2024 Logo" className="h-8 w-8" />
+          <img 
+            src="/l.jpg" 
+            alt="MegaPack 2024 Logo" 
+            className="h-8 w-8" 
+            style={{ border: '2px solid red' }}
+          />
           MegaPack<span className="text-primary">2024</span>
         </Link>
 
@@ -64,7 +69,13 @@ export default function Header() {
               <SheetContent side="right" className="bg-gray-900/95 backdrop-blur-lg border-l-gray-800 p-0">
                 <div className="flex flex-col h-full">
                   <div className="flex justify-between items-center p-4 border-b border-gray-800">
-                    <Link href="#inicio" className="text-xl font-bold text-white font-headline" onClick={() => setIsMenuOpen(false)}>
+                    <Link href="#inicio" className="flex items-center gap-2 text-xl font-bold text-white font-headline" onClick={() => setIsMenuOpen(false)}>
+                       <img 
+                        src="/l.jpg" 
+                        alt="MegaPack 2024 Logo" 
+                        className="h-8 w-8" 
+                        style={{ border: '2px solid red' }}
+                      />
                       MegaPack<span className="text-primary">2024</span>
                     </Link>
                     <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
