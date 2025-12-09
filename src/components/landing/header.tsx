@@ -3,12 +3,6 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Menu, X } from 'lucide-react';
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet"
 
 const navItems = [
   { name: 'Início', href: '#inicio' },
@@ -17,11 +11,8 @@ const navItems = [
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
@@ -52,41 +43,6 @@ export default function Header() {
             <Link href="#inicio">Comprar Agora</Link>
           </Button>
 
-          <div className="md:hidden">
-           {isMounted && (
-            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="bg-gray-900/95 backdrop-blur-lg border-l-gray-800 p-0">
-                <div className="flex flex-col h-full">
-                  <div className="flex justify-between items-center p-4 border-b border-gray-800">
-                    <Link href="#inicio" className="flex items-center gap-2 text-xl font-bold text-white font-headline" onClick={() => setIsMenuOpen(false)}>
-                      Dezenas da <span className="text-primary">Virada</span>
-                    </Link>
-                    <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
-                      <X className="h-6 w-6" />
-                    </Button>
-                  </div>
-                  <nav className="flex flex-col items-start space-y-4 p-4">
-                    {navItems.map((item) => (
-                      <Link key={item.name} href={item.href} className="text-lg text-gray-300 hover:text-white transition-colors" onClick={() => setIsMenuOpen(false)}>
-                        {item.name}
-                      </Link>
-                    ))}
-                  </nav>
-                  <div className="mt-auto p-4">
-                    <Button asChild className="w-full" onClick={() => setIsMenuOpen(false)}>
-                        <Link href="#inicio">Comprar Agora</Link>
-                    </Button>
-                  </div>
-                </div>
-              </SheetContent>
-            </Sheet>
-           )}
-          </div>
         </div>
       </div>
     </header>
