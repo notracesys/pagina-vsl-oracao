@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
@@ -37,7 +36,7 @@ export default function Header() {
     )}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
         <Link href="#inicio" className="flex items-center gap-2 text-2xl font-black text-white font-headline tracking-tighter">
-          <Image src="/l.jpg" alt="MegaPack 2024 Logo" width={32} height={32} />
+          <img src="/l.jpg" alt="MegaPack 2024 Logo" className="h-8 w-8" />
           MegaPack<span className="text-primary">2024</span>
         </Link>
 
