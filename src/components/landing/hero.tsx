@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ShieldCheck, Lock, FileText } from 'lucide-react';
+import CountdownTimer from '../shared/countdown-timer';
 
 const FloatingNumber = ({ number, style }: { number: number; style: React.CSSProperties }) => (
   <div
@@ -16,8 +17,14 @@ const FloatingNumber = ({ number, style }: { number: number; style: React.CSSPro
 
 export default function Hero() {
   const [numbers, setNumbers] = useState<Array<{ num: number; style: React.CSSProperties }>>([]);
+  const [targetDate, setTargetDate] = useState('');
 
   useEffect(() => {
+    // Set the countdown to end in 3 days from now, only on client
+    const date = new Date();
+    date.setDate(date.getDate() + 3);
+    setTargetDate(date.toISOString());
+
     if (typeof window !== 'undefined') {
       const isMobile = window.innerWidth < 768;
       const numCount = isMobile ? 8 : 15;
@@ -50,6 +57,11 @@ export default function Hero() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="animate-in fade-in slide-in-from-bottom-16 duration-1000">
+          <div className="mb-8">
+            <p className="text-accent font-semibold mb-4">A OFERTA TERMINA EM:</p>
+            {targetDate && <CountdownTimer targetDate={targetDate} />}
+          </div>
+
           <h1 className="text-4xl md:text-6xl font-black text-white font-headline leading-tight tracking-tighter">
             <span className="text-primary">+50 Jogos Prontos</span> Para a Mega da Virada
           </h1>
@@ -57,35 +69,32 @@ export default function Hero() {
             A escolha inteligente para quem quer aumentar as chances com combinações estudadas, economizando tempo e esforço.
           </p>
         </div>
+        
+        <div className="mt-10 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{animationDelay: "200ms"}}>
+            <div className="glassmorphism p-8 md:p-10 max-w-lg mx-auto">
+              <p className="text-xl text-gray-400">De <span className="line-through">R$20,00</span> por apenas:</p>
+              <div className="my-4">
+                <span className="text-7xl md:text-8xl font-black text-white ml-2">R$9,99</span>
+              </div>
+              
+              <Button size="lg" className="w-full text-xl py-8 animate-button-pulse hover:scale-105 transition-transform">
+                SIM, QUERO MEU PACK COM DESCONTO!
+              </Button>
+              <p className="text-xs text-gray-500 mt-4">Compra segura e entrega automática no seu e-mail.</p>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{animationDelay: "200ms"}}>
-          <Button size="lg" className="w-full sm:w-auto text-lg py-7 px-10 animate-button-pulse hover:scale-105 transition-transform" asChild>
-            <Link href="#comprar">QUERO AUMENTAR MINHAS CHANCES</Link>
-          </Button>
-          <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent border-primary text-primary hover:bg-primary hover:text-white hover:scale-105 transition-transform" asChild>
-            <Link href="#o-que-voce-recebe">Ver Mais</Link>
-          </Button>
+              <div className="mt-6 flex items-center justify-center gap-6 text-sm font-medium text-gray-300">
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="h-5 w-5 text-green-400" />
+                    <span>Garantia de 7 dias</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Lock className="h-5 w-5 text-accent" />
+                    <span>Pagamento 100% Seguro</span>
+                  </div>
+              </div>
+            </div>
         </div>
 
-        <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-8 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{animationDelay: "400ms"}}>
-          <Card className="glassmorphism max-w-sm w-full">
-            <CardContent className="p-6 flex flex-col items-center justify-center">
-              <FileText className="w-16 h-16 text-primary mb-4" />
-              <h3 className="text-lg font-bold text-white">Mockup do Produto</h3>
-              <p className="text-sm text-gray-400">PDF Premium com +50 Jogos</p>
-            </CardContent>
-          </Card>
-          <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-3 text-sm font-medium text-gray-300">
-                  <ShieldCheck className="h-5 w-5 text-green-400" />
-                  <span>Garantia de 7 dias</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm font-medium text-gray-300">
-                  <Lock className="h-5 w-5 text-accent" />
-                  <span>Pagamento 100% Seguro</span>
-              </div>
-          </div>
-        </div>
       </div>
     </section>
   );

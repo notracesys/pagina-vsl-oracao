@@ -1,11 +1,6 @@
 import Header from '@/components/landing/header';
 import Hero from '@/components/landing/hero';
 import WhatYouGet from '@/components/landing/what-you-get';
-import Benefits from '@/components/landing/benefits';
-import Testimonials from '@/components/landing/testimonials';
-import Credibility from '@/components/landing/credibility';
-import Pricing from '@/components/landing/pricing';
-import Faq from '@/components/landing/faq';
 import Footer from '@/components/landing/footer';
 
 export default function Home() {
@@ -18,11 +13,6 @@ export default function Home() {
       <main className="relative z-10">
         <Hero />
         <WhatYouGet />
-        <Benefits />
-        <Testimonials />
-        <Credibility />
-        <Pricing />
-        <Faq />
       </main>
       <Footer />
     </div>

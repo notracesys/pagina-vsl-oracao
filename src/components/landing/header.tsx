@@ -13,9 +13,6 @@ import {
 const navItems = [
   { name: 'Início', href: '#inicio' },
   { name: 'O que você recebe', href: '#o-que-voce-recebe' },
-  { name: 'Benefícios', href: '#beneficios' },
-  { name: 'Depoimentos', href: '#depoimentos' },
-  { name: 'Garantia', href: '#garantia' },
 ];
 
 export default function Header() {
@@ -50,7 +47,7 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           <Button asChild className="hidden md:block hover:scale-105 transition-transform">
-            <Link href="#comprar">Comprar Agora</Link>
+            <Link href="#inicio">Comprar Agora</Link>
           </Button>
 
           <div className="md:hidden">
@@ -79,7 +76,7 @@ export default function Header() {
                   </nav>
                   <div className="mt-auto p-4">
                     <Button asChild className="w-full" onClick={() => setIsMenuOpen(false)}>
-                        <Link href="#comprar">Comprar Agora</Link>
+                        <Link href="#inicio">Comprar Agora</Link>
                     </Button>
                   </div>
                 </div>
