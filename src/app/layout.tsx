@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'MegaPack 2024',
+  title: 'Dezenas da Virada',
   description: 'Aumente suas chances na Mega da Virada com jogos prontos e estudados.',
 };
 

@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-center md:text-left">
             <Link href="#inicio" className="text-2xl font-black text-white font-headline tracking-tighter">
-              MegaPack<span className="text-primary">2024</span>
+              Dezenas da <span className="text-primary">Virada</span>
             </Link>
             <p className="text-sm text-gray-500 mt-2">© {new Date().getFullYear()} Todos os direitos reservados.</p>
           </div>

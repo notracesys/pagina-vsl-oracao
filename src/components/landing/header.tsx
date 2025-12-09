@@ -36,7 +36,7 @@ export default function Header() {
     )}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
         <Link href="#inicio" className="flex items-center gap-2 text-2xl font-black text-white font-headline tracking-tighter">
-          MegaPack<span className="text-primary">2024</span>
+          Dezenas da <span className="text-primary">Virada</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">
@@ -64,7 +64,7 @@ export default function Header() {
                 <div className="flex flex-col h-full">
                   <div className="flex justify-between items-center p-4 border-b border-gray-800">
                     <Link href="#inicio" className="flex items-center gap-2 text-xl font-bold text-white font-headline" onClick={() => setIsMenuOpen(false)}>
-                      MegaPack<span className="text-primary">2024</span>
+                      Dezenas da <span className="text-primary">Virada</span>
                     </Link>
                     <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
                       <X className="h-6 w-6" />
