@@ -6,47 +6,12 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ShieldCheck, Lock, FileText } from 'lucide-react';
 import CountdownTimer from '../shared/countdown-timer';
 
-const FloatingNumber = ({ number, style }: { number: number; style: React.CSSProperties }) => (
-  <div
-    className="absolute text-4xl font-bold text-white/10"
-    style={style}
-  >
-    {String(number).padStart(2, '0')}
-  </div>
-);
-
 export default function Hero() {
-  const [numbers, setNumbers] = useState<Array<{ num: number; style: React.CSSProperties }>>([]);
   
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const isMobile = window.innerWidth < 768;
-      const numCount = isMobile ? 8 : 15;
-      const newNumbers = Array.from({ length: numCount }).map(() => {
-        const size = Math.random() * 2 + 1;
-        const duration = Math.random() * 10 + 10;
-        const delay = Math.random() * 5;
-        return {
-          num: Math.floor(Math.random() * 60) + 1,
-          style: {
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
-            fontSize: `${size}rem`,
-            animation: `float ${duration}s ease-in-out ${delay}s infinite`,
-            opacity: Math.random() * 0.08 + 0.02
-          },
-        };
-      });
-      setNumbers(newNumbers);
-    }
-  }, []);
-
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden py-32 md:py-24">
       <div className="absolute inset-0 z-0">
-        {numbers.map((item, i) => (
-          <FloatingNumber key={i} number={item.num} style={item.style} />
-        ))}
+        {/* Floating numbers removed */}
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center">
