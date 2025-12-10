@@ -20,9 +20,9 @@ export default function Hero() {
   const [targetDate, setTargetDate] = useState('');
 
   useEffect(() => {
-    // Set the countdown to end in 3 days from now, only on client
+    // Set the countdown to end in 20 minutes from now, only on client
     const date = new Date();
-    date.setDate(date.getDate() + 3);
+    date.setMinutes(date.getMinutes() + 20);
     setTargetDate(date.toISOString());
 
     if (typeof window !== 'undefined') {

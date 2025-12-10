@@ -1,12 +1,20 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import CountdownTimer from "@/components/shared/countdown-timer";
 import { Reveal } from "../shared/reveal";
 import Link from 'next/link';
+import { useEffect, useState } from "react";
 
 export default function Pricing() {
-  // Set the countdown to end in 3 days from now
-  const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 3);
+  const [targetDate, setTargetDate] = useState('');
+
+  useEffect(() => {
+    // Set the countdown to end in 20 minutes from now
+    const date = new Date();
+    date.setMinutes(date.getMinutes() + 20);
+    setTargetDate(date.toISOString());
+  }, []);
 
   return (
     <section id="comprar" className="py-20 sm:py-32">
@@ -36,7 +44,7 @@ export default function Pricing() {
 
             <div className="mt-12">
               <p className="text-accent font-semibold mb-4">A OFERTA TERMINA EM:</p>
-              <CountdownTimer targetDate={targetDate.toISOString()} />
+              {targetDate && <CountdownTimer targetDate={targetDate} />}
             </div>
           </div>
         </Reveal>
