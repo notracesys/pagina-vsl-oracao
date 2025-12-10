@@ -7,6 +7,7 @@ interface CountdownTimerProps {
 
 const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
   const [timeLeft, setTimeLeft] = useState({
+    dias: 0,
     horas: 0,
     minutos: 0,
     segundos: 0,
@@ -17,12 +18,13 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
       const difference = +new Date(targetDate) - +new Date();
       if (difference > 0) {
         return {
-          horas: Math.floor(difference / (1000 * 60 * 60)),
+          dias: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          horas: Math.floor((difference / (1000 * 60 * 60)) % 24),
           minutos: Math.floor((difference / 1000 / 60) % 60),
           segundos: Math.floor((difference / 1000) % 60),
         };
       }
-      return { horas: 0, minutos: 0, segundos: 0 };
+      return { dias: 0, horas: 0, minutos: 0, segundos: 0 };
     };
 
     // Set initial value
@@ -44,8 +46,8 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
 
   return (
     <div className="flex justify-center gap-2 sm:gap-4">
-      {timeLeft.horas === 0 && timeLeft.minutos === 0 && timeLeft.segundos === 0 
-        ? <span className="text-xl font-bold text-red-500">Oferta encerrada!</span>
+      {timeLeft.dias === 0 && timeLeft.horas === 0 && timeLeft.minutos === 0 && timeLeft.segundos === 0 
+        ? <span className="text-xl font-bold text-red-500">Sorteio em andamento!</span>
         : timerComponents}
     </div>
   );

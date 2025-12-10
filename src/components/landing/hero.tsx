@@ -20,10 +20,14 @@ export default function Hero() {
   const [targetDate, setTargetDate] = useState('');
 
   useEffect(() => {
-    // Set the countdown to end in 20 minutes from now, only on client
-    const date = new Date();
-    date.setMinutes(date.getMinutes() + 20);
-    setTargetDate(date.toISOString());
+    // Set the countdown to the Mega da Virada draw time
+    const currentYear = new Date().getFullYear();
+    const drawDate = new Date(`${currentYear}-12-31T20:00:00-03:00`);
+    // If the date has passed, set it to next year's draw
+    if (drawDate.getTime() < Date.now()) {
+      drawDate.setFullYear(currentYear + 1);
+    }
+    setTargetDate(drawDate.toISOString());
 
     if (typeof window !== 'undefined') {
       const isMobile = window.innerWidth < 768;
@@ -58,7 +62,7 @@ export default function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="animate-in fade-in slide-in-from-bottom-16 duration-1000">
           <div className="mb-8">
-            <p className="text-accent font-semibold mb-4">A OFERTA TERMINA EM:</p>
+            <p className="text-accent font-semibold mb-4">TEMPO RESTANTE PARA O SORTEIO:</p>
             {targetDate && <CountdownTimer targetDate={targetDate} />}
           </div>
 
@@ -66,7 +70,7 @@ export default function Hero() {
             <span className="text-primary">+50 Jogos Prontos</span> Para a Mega da Virada
           </h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-gray-300">
-            A escolha inteligente para quem quer aumentar as chances com combinações estudadas e geradas por matemáticos, economizando tempo и esforço.
+            A escolha inteligente para quem quer aumentar as chances com combinações estudadas e geradas por matemáticos, economizando tempo e esforço.
           </p>
         </div>
         

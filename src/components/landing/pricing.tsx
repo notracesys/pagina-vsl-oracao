@@ -10,10 +10,14 @@ export default function Pricing() {
   const [targetDate, setTargetDate] = useState('');
 
   useEffect(() => {
-    // Set the countdown to end in 20 minutes from now
-    const date = new Date();
-    date.setMinutes(date.getMinutes() + 20);
-    setTargetDate(date.toISOString());
+    // Set the countdown to the Mega da Virada draw time
+    const currentYear = new Date().getFullYear();
+    const drawDate = new Date(`${currentYear}-12-31T20:00:00-03:00`);
+    // If the date has passed, set it to next year's draw
+    if (drawDate.getTime() < Date.now()) {
+      drawDate.setFullYear(currentYear + 1);
+    }
+    setTargetDate(drawDate.toISOString());
   }, []);
 
   return (
@@ -43,7 +47,7 @@ export default function Pricing() {
             </div>
 
             <div className="mt-12">
-              <p className="text-accent font-semibold mb-4">A OFERTA TERMINA EM:</p>
+              <p className="text-accent font-semibold mb-4">TEMPO RESTANTE PARA O SORTEIO:</p>
               {targetDate && <CountdownTimer targetDate={targetDate} />}
             </div>
           </div>
