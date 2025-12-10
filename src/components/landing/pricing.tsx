@@ -47,7 +47,7 @@ export default function Pricing() {
             </div>
 
             <div className="mt-12">
-              <p className="text-accent font-semibold mb-4">TEMPO RESTANTE PARA O SORTEIO:</p>
+              <p className="text-accent font-semibold mb-4">TEMPO RESTANTE PARA O SORTEIO DA MEGA DA VIRADA:</p>
               {targetDate && <CountdownTimer targetDate={targetDate} />}
             </div>
           </div>
