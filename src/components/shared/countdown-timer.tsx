@@ -37,25 +37,22 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  const timerComponents = (Object.keys(timeLeft) as Array<keyof typeof timeLeft>).map((interval, index) => (
-    <div key={interval} className="flex items-center">
-      <div className="flex flex-col items-center">
-        <span className="text-4xl md:text-5xl font-black text-white tabular-nums tracking-tighter">
-          {String(timeLeft[interval]).padStart(2, '0')}
-        </span>
-        <span className="text-xs uppercase text-gray-400 tracking-wider">{interval}</span>
+  const timerComponents = (Object.keys(timeLeft) as Array<keyof typeof timeLeft>).map((interval) => {
+    if (interval === 'dias' && timeLeft[interval] === 0) return null;
+    return (
+      <div key={interval} className="text-center">
+        <div className="text-4xl md:text-5xl font-black text-white">{String(timeLeft[interval]).padStart(2, '0')}</div>
+        <div className="text-xs uppercase text-gray-400">{interval}</div>
       </div>
-      {index < 3 && (
-        <span className="text-4xl md:text-5xl font-black text-primary mx-2 md:mx-4 -mt-4">:</span>
-      )}
-    </div>
-  ));
+    );
+  }).filter(Boolean);
 
   return (
-    <div className="flex justify-center items-start p-4 bg-black/20 rounded-xl">
+    <div className="glassmorphism p-4 rounded-xl">
       {timeLeft.dias === 0 && timeLeft.horas === 0 && timeLeft.minutos === 0 && timeLeft.segundos === 0 
         ? <span className="text-xl font-bold text-red-500">Sorteio em andamento!</span>
-        : timerComponents}
+        : <div className="flex justify-center gap-4 md:gap-8">{timerComponents}</div>
+      }
     </div>
   );
 };
