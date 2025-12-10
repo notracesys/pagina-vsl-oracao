@@ -17,18 +17,8 @@ const FloatingNumber = ({ number, style }: { number: number; style: React.CSSPro
 
 export default function Hero() {
   const [numbers, setNumbers] = useState<Array<{ num: number; style: React.CSSProperties }>>([]);
-  const [targetDate, setTargetDate] = useState('');
-
+  
   useEffect(() => {
-    // Set the countdown to the Mega da Virada draw time
-    const currentYear = new Date().getFullYear();
-    const drawDate = new Date(`${currentYear}-12-31T20:00:00-03:00`);
-    // If the date has passed, set it to next year's draw
-    if (drawDate.getTime() < Date.now()) {
-      drawDate.setFullYear(currentYear + 1);
-    }
-    setTargetDate(drawDate.toISOString());
-
     if (typeof window !== 'undefined') {
       const isMobile = window.innerWidth < 768;
       const numCount = isMobile ? 8 : 15;
@@ -65,7 +55,7 @@ export default function Hero() {
             <span className="text-primary">+50 Jogos Prontos</span> Para a Mega da Virada
           </h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-gray-300">
-            A escolha inteligente para quem quer aumentar as chances com combinações estudadas e geradas por matemáticos, economizando tempo e esforço.
+            A escolha inteligente para quem quer aumentar as chances com combinações estudadas e geradas por matemáticos, economizando tempo и esforço.
           </p>
         </div>
         
@@ -94,10 +84,6 @@ export default function Hero() {
                   </div>
               </div>
             </div>
-        </div>
-
-        <div className="mt-12 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{animationDelay: "400ms"}}>
-          {targetDate && <CountdownTimer targetDate={targetDate} />}
         </div>
       </div>
     </section>
