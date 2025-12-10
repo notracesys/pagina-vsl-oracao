@@ -95,10 +95,11 @@ export default {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
         },
-        shine: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100%)' },
-        }
+        'gold-shine-animation': {
+          to: {
+            'background-position': '-200% center',
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -106,6 +107,7 @@ export default {
         'button-pulse': 'button-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'float': 'float 6s ease-in-out infinite',
         'shine': 'shine 5s ease-in-out infinite',
+        'gold-shine-animation': 'gold-shine-animation 3s linear infinite',
       },
     },
   },
