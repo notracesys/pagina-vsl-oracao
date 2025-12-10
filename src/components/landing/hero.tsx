@@ -59,12 +59,8 @@ export default function Hero() {
         ))}
       </div>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 flex flex-col items-center">
         <div className="animate-in fade-in slide-in-from-bottom-16 duration-1000">
-          <div className="mb-8">
-            {targetDate && <CountdownTimer targetDate={targetDate} />}
-          </div>
-
           <h1 className="text-4xl md:text-6xl font-black text-white font-headline leading-tight tracking-tighter">
             <span className="text-primary">+50 Jogos Prontos</span> Para a Mega da Virada
           </h1>
@@ -73,7 +69,7 @@ export default function Hero() {
           </p>
         </div>
         
-        <div className="mt-10 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{animationDelay: "200ms"}}>
+        <div className="mt-10 animate-in fade-in slide-in-from-bottom-16 duration-1000 w-full" style={{animationDelay: "200ms"}}>
             <div className="glassmorphism p-8 md:p-10 max-w-lg mx-auto">
               <p className="text-xl text-white">De <span className="line-through">R$20,00</span> por apenas:</p>
               <div className="my-4">
@@ -100,6 +96,9 @@ export default function Hero() {
             </div>
         </div>
 
+        <div className="mt-12 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{animationDelay: "400ms"}}>
+          {targetDate && <CountdownTimer targetDate={targetDate} />}
+        </div>
       </div>
     </section>
   );

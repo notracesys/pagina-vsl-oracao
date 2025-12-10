@@ -41,6 +41,7 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
 
   return (
     <div className="glassmorphism p-4 rounded-xl flex flex-col items-center gap-2">
+      <p className="font-semibold text-sm gold-shine">TEMPO RESTANTE PARA O SORTEIO DA MEGA DA VIRADA:</p>
       {timeLeft.dias === 0 && timeLeft.horas === 0 && timeLeft.minutos === 0 && timeLeft.segundos === 0 
         ? <span className="text-xl font-bold text-red-500">Sorteio em andamento!</span>
         : (
@@ -59,7 +60,6 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
           </div>
         )
       }
-      <p className="font-semibold text-sm gold-shine">TEMPO RESTANTE PARA O SORTEIO DA MEGA DA VIRADA:</p>
     </div>
   );
 };
