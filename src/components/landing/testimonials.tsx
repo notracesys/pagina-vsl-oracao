@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
-import { Star } from 'lucide-react';
+import { Star, UserCircle } from 'lucide-react';
 import { Reveal } from '../shared/reveal';
 
 const testimonials = [
@@ -53,36 +53,26 @@ export default function Testimonials() {
           </div>
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => {
-            const image = PlaceHolderImages.find(img => img.id === testimonial.id);
-            return (
-              <Reveal key={testimonial.id} delay={index * 100}>
-                <Card className="glassmorphism h-full">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      {image && (
-                        <Image
-                          src={image.imageUrl}
-                          alt={testimonial.name}
-                          width={50}
-                          height={50}
-                          className="rounded-full border-2 border-primary"
-                          data-ai-hint={image.imageHint}
-                        />
-                      )}
-                      <div className="flex-1">
-                        <div className="flex justify-between items-center mb-2">
-                          <h3 className="font-bold text-white">{testimonial.name}</h3>
-                          <Rating value={testimonial.rating} />
-                        </div>
-                        <p className="text-gray-300 italic">"{testimonial.text}"</p>
-                      </div>
+          {testimonials.map((testimonial, index) => (
+            <Reveal key={testimonial.id} delay={index * 100}>
+              <Card className="glassmorphism h-full">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-[50px] h-[50px] flex-shrink-0">
+                      <UserCircle className="w-full h-full text-gray-500" />
                     </div>
-                  </CardContent>
-                </Card>
-              </Reveal>
-            );
-          })}
+                    <div className="flex-1">
+                      <div className="flex justify-between items-center mb-2">
+                        <h3 className="font-bold text-white">{testimonial.name}</h3>
+                        <Rating value={testimonial.rating} />
+                      </div>
+                      <p className="text-gray-300 italic">"{testimonial.text}"</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
