@@ -28,7 +28,7 @@ export default function Pricing() {
               
               <Link href="https://pay.kirvano.com/415dda1a-220b-4514-983c-c51283359309" target="_blank">
                 <Button size="lg" className="w-full text-xl py-8 animate-button-pulse hover:scale-105 transition-transform shine-effect">
-                  SIM, QUERO MEU PACK COM DESCONTO!
+                  QUERO GARANTIR MINHAS DEZENAS
                 </Button>
               </Link>
               <p className="text-xs text-gray-500 mt-4">Compra segura e entrega automática no seu e-mail.</p>
