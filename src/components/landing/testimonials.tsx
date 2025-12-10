@@ -1,26 +1,26 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
-import { Star, UserCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { Reveal } from '../shared/reveal';
 
 const testimonials = [
   {
-    id: 'testimonial-1',
     name: 'João S.',
+    location: 'Belo Horizonte, MG',
     text: 'Incrível! Economizei um tempo enorme. Os jogos são bem distribuídos, seguem padrões muito inteligentes e são fáceis de usar. Recomendo demais!',
     rating: 5,
   },
   {
-    id: 'testimonial-2',
     name: 'Maria L.',
-    text: 'A praticidade é o ponto alto. Recebi na hora por e-mail и já fiz minhas apostas. A organização é impecável.',
+    location: 'Salvador, BA',
+    text: 'A praticidade é o ponto alto. Recebi na hora por e-mail e já fiz minhas apostas. A organização é impecável.',
     rating: 5,
   },
   {
-    id: 'testimonial-4',
     name: 'Ana B.',
-    text: 'Sou iniciante e achei super fácil. O PDF é claro e direto. Agora é só torcer! Com certeza usarei nos próximos anos.',
+    location: 'Curitiba, PR',
+    text: 'Sou iniciante e achei super fácil. O PDF é claro и direto. Agora é só torcer! Com certeza usarei nos próximos anos.',
     rating: 5,
   },
 ];
@@ -54,19 +54,19 @@ export default function Testimonials() {
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Reveal key={testimonial.id} delay={index * 100}>
+            <Reveal key={testimonial.name} delay={index * 100}>
               <Card className="glassmorphism h-full">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-[50px] h-[50px] flex-shrink-0">
-                      <UserCircle className="w-full h-full text-gray-500" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-center mb-2">
+                <CardContent className="p-6 flex flex-col">
+                  <div className="flex-grow">
+                    <p className="text-gray-300 italic">"{testimonial.text}"</p>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-white/10">
+                    <div className="flex justify-between items-center">
+                      <div>
                         <h3 className="font-bold text-white">{testimonial.name}</h3>
-                        <Rating value={testimonial.rating} />
+                        <p className="text-sm text-gray-400">{testimonial.location}</p>
                       </div>
-                      <p className="text-gray-300 italic">"{testimonial.text}"</p>
+                      <Rating value={testimonial.rating} />
                     </div>
                   </div>
                 </CardContent>
