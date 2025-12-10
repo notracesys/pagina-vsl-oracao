@@ -62,7 +62,6 @@ export default function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="animate-in fade-in slide-in-from-bottom-16 duration-1000">
           <div className="mb-8">
-            <p className="font-semibold mb-4 gold-shine">TEMPO RESTANTE PARA O SORTEIO DA MEGA DA VIRADA:</p>
             {targetDate && <CountdownTimer targetDate={targetDate} />}
           </div>
 
