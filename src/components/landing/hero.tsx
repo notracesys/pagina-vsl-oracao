@@ -72,7 +72,7 @@ export default function Hero() {
         
         <div className="mt-10 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{animationDelay: "200ms"}}>
             <div className="glassmorphism p-8 md:p-10 max-w-lg mx-auto">
-              <p className="text-xl text-destructive">De <span className="line-through">R$20,00</span> por apenas:</p>
+              <p className="text-xl text-gray-400">De <span className="line-through">R$20,00</span> por apenas:</p>
               <div className="my-4">
                 <span className="text-7xl md:text-8xl font-black text-white ml-2">R$9,99</span>
               </div>
