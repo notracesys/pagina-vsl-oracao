@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 import { Reveal } from '../shared/reveal';
@@ -20,7 +18,7 @@ const testimonials = [
   {
     name: 'Ana B.',
     location: 'Curitiba, PR',
-    text: 'Sou iniciante e achei super fácil. O PDF é claro и direto. Agora é só torcer! Com certeza usarei nos próximos anos.',
+    text: 'Sou iniciante e achei super fácil. O PDF é claro e direto. Agora é só torcer! Com certeza usarei nos próximos anos.',
     rating: 5,
   },
 ];
