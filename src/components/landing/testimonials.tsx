@@ -57,10 +57,7 @@ export default function Testimonials() {
             <Reveal key={testimonial.name} delay={index * 100}>
               <Card className="glassmorphism h-full">
                 <CardContent className="p-6 flex flex-col">
-                  <div className="flex-grow">
-                    <p className="text-gray-300 italic">"{testimonial.text}"</p>
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-white/10">
+                  <div className="mb-4 pb-4 border-b border-white/10">
                     <div className="flex justify-between items-center">
                       <div>
                         <h3 className="font-bold text-white">{testimonial.name}</h3>
@@ -68,6 +65,9 @@ export default function Testimonials() {
                       </div>
                       <Rating value={testimonial.rating} />
                     </div>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="text-gray-300 italic">"{testimonial.text}"</p>
                   </div>
                 </CardContent>
               </Card>
