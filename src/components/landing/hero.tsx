@@ -62,7 +62,7 @@ export default function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="animate-in fade-in slide-in-from-bottom-16 duration-1000">
           <div className="mb-8">
-            <p className="text-accent font-semibold mb-4">TEMPO RESTANTE PARA O SORTEIO DA MEGA DA VIRADA:</p>
+            <p className="text-white font-semibold mb-4">TEMPO RESTANTE PARA O SORTEIO DA MEGA DA VIRADA:</p>
             {targetDate && <CountdownTimer targetDate={targetDate} />}
           </div>
 
@@ -76,7 +76,7 @@ export default function Hero() {
         
         <div className="mt-10 animate-in fade-in slide-in-from-bottom-16 duration-1000" style={{animationDelay: "200ms"}}>
             <div className="glassmorphism p-8 md:p-10 max-w-lg mx-auto">
-              <p className="text-xl text-gray-400">De <span className="line-through">R$20,00</span> por apenas:</p>
+              <p className="text-xl text-white">De <span className="line-through">R$20,00</span> por apenas:</p>
               <div className="my-4">
                 <span className="text-7xl md:text-8xl font-black text-white ml-2">R$9,99</span>
               </div>

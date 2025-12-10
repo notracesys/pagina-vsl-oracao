@@ -31,7 +31,7 @@ export default function Pricing() {
             </p>
 
             <div className="glassmorphism p-8 md:p-12">
-              <p className="text-xl text-gray-400">De <span className="line-through">R$97,00</span> por apenas:</p>
+              <p className="text-xl text-white">De <span className="line-through">R$97,00</span> por apenas:</p>
               <div className="my-4">
                 <span className="text-5xl md:text-7xl font-black text-primary">12x</span>
                 <span className="text-7xl md:text-9xl font-black text-white ml-2">R$2,25</span>
@@ -47,7 +47,7 @@ export default function Pricing() {
             </div>
 
             <div className="mt-12">
-              <p className="text-accent font-semibold mb-4">TEMPO RESTANTE PARA O SORTEIO DA MEGA DA VIRADA:</p>
+              <p className="text-white font-semibold mb-4">TEMPO RESTANTE PARA O SORTEIO DA MEGA DA VIRADA:</p>
               {targetDate && <CountdownTimer targetDate={targetDate} />}
             </div>
           </div>
