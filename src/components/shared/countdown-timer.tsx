@@ -44,12 +44,12 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
       {timeLeft.dias === 0 && timeLeft.horas === 0 && timeLeft.minutos === 0 && timeLeft.segundos === 0 
         ? <span className="text-xl font-bold text-red-500">Sorteio em andamento!</span>
         : (
-          <div className="flex justify-center items-center gap-2 md:gap-4">
+          <div className="flex justify-center items-center gap-2 md:gap-4 font-digital">
             {timerItems.map(([interval, value], index) => (
               <div key={interval} className="flex items-center gap-2 md:gap-4">
                 <div className="text-center">
                   <div className="text-4xl md:text-5xl font-black text-white">{String(value).padStart(2, '0')}</div>
-                  <div className="text-xs uppercase text-gray-400">{interval}</div>
+                  <div className="text-xs uppercase text-gray-400 font-body">{interval}</div>
                 </div>
                 {index < timerItems.length - 1 && (
                   <div className="text-4xl md:text-5xl font-black text-primary -translate-y-2">:</div>
