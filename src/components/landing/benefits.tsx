@@ -1,27 +1,27 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Clock, Sparkles, BarChart3, UserCheck } from "lucide-react";
+import { Copy, BrainCircuit, Filter, Zap } from "lucide-react";
 import { Reveal } from "../shared/reveal";
 
 const benefits = [
   {
-    icon: Clock,
-    title: "Economia de Tempo",
-    description: "Não gaste horas ou dias montando jogos. Nós já fizemos o trabalho duro para você.",
+    icon: Copy,
+    title: "Aumente Suas Combinações",
+    description: "Com mais de 50 jogos prontos, você aposta em uma variedade muito maior de combinações, cobrindo mais possibilidades.",
   },
   {
-    icon: Sparkles,
-    title: "Praticidade Total",
-    description: "Tudo pronto, organizado e de fácil acesso para você apenas copiar e registrar sua aposta.",
+    icon: BrainCircuit,
+    title: "Jogos Inteligentes",
+    description: "Nossas dezenas evitam vícios comuns (sequências, datas) e são criadas com base em padrões estratégicos para otimizar sua aposta.",
   },
   {
-    icon: BarChart3,
-    title: "Baseado em Estratégia",
-    description: "Nossos jogos são montados utilizando padrões populares entre apostadores experientes.",
+    icon: Filter,
+    title: "Filtros de Especialistas",
+    description: "As combinações passam por filtros que analisam a distribuição de dezenas, buscando um equilíbrio inteligente em cada jogo.",
   },
   {
-    icon: UserCheck,
-    title: "Simples e Intuitivo",
-    description: "Perfeito para todos! Até quem nunca apostou antes consegue usar sem nenhuma dificuldade.",
+    icon: Zap,
+    title: "Aposta Pronta em Minutos",
+    description: "Receba, copie e aposte. Transforme a tarefa de escolher dezenas em um processo de poucos cliques, com muito mais estratégia.",
   },
 ];
 
@@ -30,7 +30,7 @@ export default function Benefits() {
     <section id="beneficios" className="py-20 sm:py-32 bg-black/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">Vantagens que só o MegaPack Oferece</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-4">Vantagens que Colocam Você à Frente</h2>
           <p className="text-lg text-gray-400 text-center max-w-2xl mx-auto mb-12">
             Veja por que nosso pack é a ferramenta que faltava para suas apostas.
           </p>
