@@ -18,12 +18,6 @@ const testimonials = [
     rating: 5,
   },
   {
-    id: 'testimonial-3',
-    name: 'Carlos P.',
-    text: 'Gostei da transparência do produto. Não promete milagres, mas entrega uma ferramenta útil. Valeu o investimento.',
-    rating: 5,
-  },
-  {
     id: 'testimonial-4',
     name: 'Ana B.',
     text: 'Sou iniciante e achei super fácil. O PDF é claro e direto. Agora é só torcer! Com certeza usarei nos próximos anos.',
@@ -50,7 +44,7 @@ export default function Testimonials() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Milhares de Clientes Satisfeitos</h2>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Veja o que nossos clientes estão dizendo sobre o MegaPack.
+              Veja o que nossos clientes estão dizendo sobre o Dezenas da Virada.
             </p>
             <div className="mt-4 flex justify-center items-center gap-2">
               <Rating value={5} />
@@ -58,7 +52,7 @@ export default function Testimonials() {
             </div>
           </div>
         </Reveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => {
             const image = PlaceHolderImages.find(img => img.id === testimonial.id);
             return (
