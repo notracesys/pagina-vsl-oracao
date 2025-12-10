@@ -18,6 +18,7 @@ export default function Home() {
       <main className="relative z-10">
         <Hero />
         <Testimonials />
+        <Benefits />
       </main>
       <Footer />
     </div>
