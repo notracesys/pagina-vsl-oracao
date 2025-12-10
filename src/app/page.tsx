@@ -17,12 +17,7 @@ export default function Home() {
       <Header />
       <main className="relative z-10">
         <Hero />
-        <WhatYouGet />
-        <Benefits />
         <Testimonials />
-        <Credibility />
-        <Pricing />
-        <Faq />
       </main>
       <Footer />
     </div>
