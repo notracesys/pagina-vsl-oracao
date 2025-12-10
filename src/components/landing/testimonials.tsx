@@ -8,13 +8,13 @@ const testimonials = [
   {
     id: 'testimonial-1',
     name: 'João S.',
-    text: 'Incrível! Economizei um tempo enorme. Os jogos são bem distribuídos e fáceis de usar. Recomendo demais!',
+    text: 'Incrível! Economizei um tempo enorme. Os jogos são bem distribuídos, seguem padrões muito inteligentes e são fáceis de usar. Recomendo demais!',
     rating: 5,
   },
   {
     id: 'testimonial-2',
     name: 'Maria L.',
-    text: 'A praticidade é o ponto alto. Recebi na hora por e-mail e já fiz minhas apostas. A organização é impecável.',
+    text: 'A praticidade é o ponto alto. Recebi na hora por e-mail и já fiz minhas apostas. A organização é impecável.',
     rating: 5,
   },
   {
