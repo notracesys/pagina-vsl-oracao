@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Dezenas da Virada',
-  description: 'Aumente suas chances na Mega da Virada com jogos prontos e estudados.',
+  title: 'São Bento - Oração Sagrada',
+  description: 'Ative o Poder da Oração Sagrada de São Bento.',
 };
 
 export default function RootLayout({
@@ -13,16 +13,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="dark">
+    <html lang="pt-BR">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@400;700;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="font-body antialiased">
+      <body className="antialiased overflow-x-hidden">
         {children}
         <Toaster />
       </body>
