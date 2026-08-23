@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect } from 'react';
@@ -20,7 +19,7 @@ export default function VideoHero() {
         Ative o Poder da <span className="text-primary underline decoration-4 underline-offset-4">Oração Sagrada de São Bento</span> que está Destravando Prosperidade...
       </h1>
 
-      <div className="relative w-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)] bg-black aspect-[3/4] max-w-[420px] mx-auto border-4 border-white">
+      <div className="relative w-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)] bg-black aspect-[3/4] max-w-[420px] mx-auto border-4 border-white mb-6">
         {/* Badge AO VIVO no player */}
         <div className="absolute top-4 left-4 z-10 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1.5 shadow-lg">
           <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
@@ -30,6 +29,12 @@ export default function VideoHero() {
         <div id="vid-6a6e30ea779ba028a9fd1a92" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}>
           <div className="vturb-player-placeholder" style={{ position: 'relative', width: '100%', padding: '133.33333333333331% 0 0', zIndex: 0, backgroundColor: 'black' }}></div>
         </div>
+      </div>
+
+      <div className="flex flex-col items-center gap-2 mb-4">
+        <p className="text-gray-700 font-bold text-sm md:text-lg animate-bounce flex items-center gap-2">
+          <span>🔊</span> Ative o som para acompanhar desde o início
+        </p>
       </div>
     </section>
   );
