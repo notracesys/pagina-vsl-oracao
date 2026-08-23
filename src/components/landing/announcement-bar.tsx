@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -6,6 +7,7 @@ export default function AnnouncementBar() {
   const [currentDate, setCurrentDate] = useState('');
 
   useEffect(() => {
+    // Gera a data atual no formato DD/MM/AAAA para evitar erros de hidratação no Next.js
     const today = new Date();
     const dd = String(today.getDate()).padStart(2, '0');
     const mm = String(today.getMonth() + 1).padStart(2, '0');
@@ -21,7 +23,7 @@ export default function AnnouncementBar() {
           <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
         </span>
         <p className="text-white text-xs md:text-sm font-black uppercase tracking-widest">
-          Transmissão Especial - Disponível até: <span className="underline">{currentDate}</span>
+          Transmissão Especial - Disponível até: <span className="underline decoration-2 underline-offset-4">{currentDate || '--/--/----'}</span>
         </p>
       </div>
     </header>
