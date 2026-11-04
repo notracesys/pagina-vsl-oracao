@@ -20,7 +20,6 @@ export default function VideoHero() {
       </h1>
 
       <div className="relative w-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)] bg-black aspect-[3/4] max-w-[420px] mx-auto border-4 border-white mb-6">
-        {/* Badge AO VIVO no player */}
         <div className="absolute top-4 left-4 z-10 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1.5 shadow-lg">
           <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
           AO VIVO

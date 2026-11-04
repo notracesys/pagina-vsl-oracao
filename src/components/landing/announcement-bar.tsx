@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -7,7 +6,6 @@ export default function AnnouncementBar() {
   const [currentDate, setCurrentDate] = useState('');
 
   useEffect(() => {
-    // Gera a data atual no formato DD/MM/AAAA para evitar erros de hidratação no Next.js
     const today = new Date();
     const dd = String(today.getDate()).padStart(2, '0');
     const mm = String(today.getMonth() + 1).padStart(2, '0');
